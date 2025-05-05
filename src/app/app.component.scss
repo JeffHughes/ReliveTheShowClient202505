@@ -1,0 +1,22 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  height: 100svh;
+  overflow: hidden;
+}
+
+.main-container {
+  flex: 1;
+  display: flex;
+  overflow: hidden;
+}
+
+.left-container {
+  flex-shrink: 0;
+}
+
+.right-container {
+  flex: 1;
+  overflow-y: auto;
+  height: 100%;
+}
