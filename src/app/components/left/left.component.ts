@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
- import { LayoutService } from '../../services/layout.service';
+import { LayoutService } from '../../services/layout.service';
 
 @Component({
   selector: 'app-left',
@@ -12,11 +12,23 @@ import { CommonModule } from '@angular/common';
         <div class="logo-area">
            <img src="../assets/images/logos/logo-name.png" 
            alt="Logo" class="logo">
-          
         </div>
         <div class="menu-area">
-          <!-- Menu placeholder -->
-          <div class="menu-placeholder">MENU</div>
+          <div class="menu-item">
+            <button class="menu-button" (click)="layoutService.showFooter.set(true)">
+              Show Footer
+            </button>
+          </div>
+          <div class="menu-item">
+            <button class="menu-button" (click)="layoutService.showFooter.set(false)">
+              Hide Footer
+            </button>
+          </div>
+          <div class="menu-item">
+            <button class="menu-button" (click)="toggleFooter()">
+              Toggle Footer
+            </button>
+          </div>
         </div>
       </div>
     </div>
@@ -52,22 +64,37 @@ import { CommonModule } from '@angular/common';
       flex: 1;
     }
 
+    .menu-item {
+      margin-bottom: 10px;
+    }
+
+    .menu-button {
+      width: 100%;
+      padding: 10px;
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      color: #fff;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .menu-button:hover {
+      background: rgba(255, 255, 255, 0.2);
+      border-color: rgba(255, 255, 255, 0.3);
+    }
 
     .logo {
       width: 100%;
       height: 100%;
       object-fit: contain;
     }
-
-    .logo-placeholder, .menu-placeholder {
-      color: rgba(255, 255, 255, 0.7);
-      text-align: center;
-      padding: 10px;
-      background: rgba(255, 255, 255, 0.1);
-      border-radius: 4px;
-    }
   `]
 })
 export class LeftComponent {
   constructor(public layoutService: LayoutService) {}
+
+  toggleFooter() {
+    this.layoutService.showFooter.update(value => !value);
+  }
 } 

@@ -8,6 +8,7 @@ export class LayoutService {
   
   readonly headerHeight = signal<number>(0);
   readonly leftWidth = signal<number>(0);
+  readonly showFooter = signal<boolean>(true);
 
   constructor() {
     this.updateDimensions();

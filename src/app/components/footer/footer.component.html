@@ -1,7 +1,13 @@
-<div class="footer-container" [style.height.px]="layoutService.isDesktopSized() ? 75 : 50">
+<div
+  class="footer-container"
+  [style.height.px]="layoutService.isDesktopSized() ? 75 : 50"
+>
   <div class="content-wrapper">
-    <div class="footer-content">
-      <div class="footer__left">
+    <div class="footer-content" [class.hidden]="!layoutService.showFooter()">
+      <div
+        class="footer__left"
+        [style.width.px]="layoutService.isDesktopSized() ? 250 : 50"
+      >
         <!-- Left section content -->
         <div class="footer-placeholder">LEFT</div>
       </div>
@@ -9,7 +15,10 @@
         <!-- Middle section content -->
         <div class="footer-placeholder">MIDDLE</div>
       </div>
-      <div class="footer__right">
+      <div
+        class="footer__right"
+        [style.width.px]="layoutService.isDesktopSized() ? 250 : 50"
+      >
         <!-- Right section content -->
         <div class="footer-placeholder">RIGHT</div>
       </div>
