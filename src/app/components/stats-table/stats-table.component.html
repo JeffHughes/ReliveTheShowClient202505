@@ -1,0 +1,38 @@
+<table class="stats-table full-width">
+  <thead>
+    <tr>
+      <th style="text-align:left; width:100%">Item</th>
+      <th>Total</th>
+      <th class="me-col"  *ngIf="hasStats()">Me</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Shows</td>
+      <td>1,000</td>
+      <td class="me-col" *ngIf="hasStats()">10</td>
+    </tr>
+    <tr>
+      <td>Songs</td>
+      <td>250</td>
+      <td class="me-col" *ngIf="hasStats()">65</td>
+    </tr>
+
+    <tr>
+        <td>Contributions</td>
+        <td>250</td>
+        <td class="me-col" *ngIf="hasStats()">65</td>
+      </tr>
+
+    <tr>
+      <td>Referrals</td>
+      <td>100</td>
+      <td class="me-col" *ngIf="hasStats()">10</td>
+    </tr>
+    <tr>
+      <td>Friends</td>
+      <td>100</td>
+      <td class="me-col" *ngIf="hasStats()">10</td>
+    </tr>
+  </tbody>
+</table> 

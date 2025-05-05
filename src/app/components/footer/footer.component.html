@@ -1,9 +1,10 @@
 <div
   class="footer-container"
-  [style.height.px]="layoutService.isDesktopSized() ? 75 : 50"
+  [style.height.px]="layoutService.footerHeight()"
+  [class.hidden]="!layoutService.showFooter()"
 >
   <div class="content-wrapper">
-    <div class="footer-content" [class.hidden]="!layoutService.showFooter()">
+    <div class="footer-content-player" [class.hidden]="!layoutService.showPlayer()">
       <div
         class="footer__left"
         [style.width.px]="layoutService.isDesktopSized() ? 250 : 50"
@@ -21,6 +22,25 @@
       >
         <!-- Right section content -->
         <div class="footer-placeholder">RIGHT</div>
+      </div>
+    </div>
+
+    <div class="footer-content-mobile" [class.hidden]="layoutService.showPlayer()">
+      <div class="mobile-nav-item">
+        <div class="icon-placeholder">🏠</div>
+        <span>Home</span>
+      </div>
+      <div class="mobile-nav-item">
+        <div class="icon-placeholder">🔍</div>
+        <span>Search</span>
+      </div>
+      <div class="mobile-nav-item">
+        <div class="icon-placeholder">📱</div>
+        <span>Shows</span>
+      </div>
+      <div class="mobile-nav-item">
+        <div class="icon-placeholder">👤</div>
+        <span>Profile</span>
       </div>
     </div>
   </div>

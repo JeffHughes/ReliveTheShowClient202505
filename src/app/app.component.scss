@@ -5,18 +5,37 @@
   overflow: hidden;
 }
 
-.main-container {
+.vertical-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  min-height: 0; // Important for flex child to respect parent height
+}
+
+.horizontal-container {
   flex: 1;
   display: flex;
   overflow: hidden;
+  min-height: 0; // Important for flex child to respect parent height
 }
 
 .left-container {
   flex-shrink: 0;
+  height: 100%;
 }
 
 .right-container {
   flex: 1;
   overflow-y: auto;
-  height: 100%;
+  min-height: 0; // Important for flex child to respect parent height
+}
+
+app-footer {
+  flex-shrink: 0;
+  transition: height 0.3s ease;
+  
+  &.hidden {
+    height: 0;
+  }
 }

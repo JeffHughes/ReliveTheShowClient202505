@@ -1,0 +1,14 @@
+<div class="left-container" [style.width.px]="layoutService.leftWidth()">
+  <div class="content-wrapper no-padding" [class.hidden]="layoutService.leftWidth() < 250">
+    <div class="logo-area  ">
+       <img src="../assets/images/logos/logo-name.png" 
+       alt="Logo" class="logo">
+    </div>
+    <div class="status-area  ">
+      <app-status-button></app-status-button>
+    </div>
+    <div class="stats-table-area no-margin">
+      <app-stats-table></app-stats-table>
+    </div>
+  </div>
+</div> 

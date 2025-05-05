@@ -1,0 +1,30 @@
+.stats-table {
+  width: 100%;
+  border-collapse: collapse;
+  color: #fff;
+  background: rgba(0,0,0,0.2);
+  font-size: 15px;
+}
+.stats-table th, .stats-table td {
+  padding: 8px 20px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  text-align: left;
+}
+.stats-table th:nth-child(2), .stats-table td:nth-child(2) {
+  text-align: right;
+}
+.stats-table th {
+  font-weight: 600;
+  background: rgba(255,255,255,0.04);
+}
+.stats-table tr:last-child td {
+  border-bottom: none;
+}
+.stats-table.full-width {
+  width: 100%;
+  margin: 0;
+}
+.stats-table th.me-col, .stats-table td.me-col {
+  border-left: 2px solid #fff;
+  background: rgba(255,255,255,0.02);
+} 
