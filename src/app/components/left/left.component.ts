@@ -10,8 +10,9 @@ import { CommonModule } from '@angular/common';
     <div class="left-container" [style.width.px]="layoutService.leftWidth()">
       <div class="content-wrapper" [class.hidden]="layoutService.leftWidth() < 250">
         <div class="logo-area">
-          <!-- Logo placeholder -->
-          <div class="logo-placeholder">LOGO</div>
+           <img src="../assets/images/logos/logo-name.png" 
+           alt="Logo" class="logo">
+          
         </div>
         <div class="menu-area">
           <!-- Menu placeholder -->
@@ -49,6 +50,13 @@ import { CommonModule } from '@angular/common';
 
     .menu-area {
       flex: 1;
+    }
+
+
+    .logo {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
     }
 
     .logo-placeholder, .menu-placeholder {
